@@ -7,22 +7,22 @@
     android:orientation="vertical"
     tools:context="find_art.FindArtActivity">
     <EditText
-        android:id="@+id/art"
+        android:id="@+id/artId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="그림이름"/>
+        android:hint="그림번호"/>
 
     <EditText
-        android:id="@+id/writer"
+        android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="작성자"/>
+        android:hint="작성자 이름 "/>
 
     <EditText
-        android:id="@+id/content"
+        android:id="@+id/date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="내용"/>
+        android:hint="날짜"/>
 
     <Button
         android:id="@+id/btnWrite"
