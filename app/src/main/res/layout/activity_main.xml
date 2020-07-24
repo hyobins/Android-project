@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="activity"
+            type="com.example.meetu.MainActivity"/>
+    </data>
+    <LinearLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="120dp"
+            android:fontFamily="@font/gg"
+            android:text="금요일 10시, '   ' 앞에서"
+            android:textSize="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="300dp"
+            android:text="밋,유"
+            android:textColor="#000000"
+            android:fontFamily="@font/gg_bold"
+            android:textSize="70dp"/>
+
+        <Button
+            android:onClick="@{activity::Start}"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:background="#000000"
+            android:fontFamily="@font/gg"
+            android:text="Get Started"
+            android:textSize="20dp"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"/>
+
+
+    </LinearLayout>
+</layout>
