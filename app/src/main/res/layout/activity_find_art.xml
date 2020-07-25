@@ -5,29 +5,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#FFFFFF"
     tools:context="find_art.FindArtActivity">
-    <EditText
-        android:id="@+id/artId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="그림번호"/>
 
-    <EditText
-        android:id="@+id/name"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="작성자 이름 "/>
+        android:fontFamily="@font/gg_bold"
+        android:text="취향에 맞는 작품을 골라보세요. "
+        android:textSize="20dp"
+        android:layout_gravity="center"
+        android:paddingTop="50dp"
+        android:paddingBottom="50dp"/>
 
-    <EditText
-        android:id="@+id/date"
+    <ListView
+        android:id="@+id/img_listview"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="날짜"/>
+        android:layout_height="wrap_content"/>
 
-    <Button
-        android:id="@+id/btnWrite"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="글 작성"/>
+
 
 </LinearLayout>
