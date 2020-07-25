@@ -1,5 +1,7 @@
 package find_person;
 
+import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,17 +10,19 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.target.ViewTarget;
 import com.example.meetu.R;
 
 import java.util.ArrayList;
 
 public class MemberDataAdapter extends BaseAdapter {
+    Context context;
     ArrayList<MemberData> invitation;
-    LayoutInflater inflater;
 
-    public MemberDataAdapter(LayoutInflater inflater, ArrayList<MemberData> invitation){
+    public MemberDataAdapter(Context context, ArrayList<MemberData> invitation){
+        this.context = context;
         this.invitation = invitation;
-        this.inflater = inflater;
     }
 
     @Override
@@ -39,7 +43,7 @@ public class MemberDataAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if(convertView == null){
-            convertView = inflater.inflate(R.layout.list_row, null);
+            convertView = LayoutInflater.from(context).inflate(R.layout.list_row, null);
         }
 
         TextView text_name = (TextView) convertView.findViewById(R.id.text_name);
@@ -48,7 +52,9 @@ public class MemberDataAdapter extends BaseAdapter {
 
         text_name.setText(invitation.get(position).getName()+"님의 초대");
         text_date.setText(invitation.get(position).getDate());
-        img_art.setImageResource(invitation.get(position).getImgId());
+        //img_art.setText(invitation.get(position).getImage());
+        Glide.with(context).load(invitation.get(position).getImage()).into(img_art);
+        //img_art.setText(invitation.get(position).getImage());
 
         return convertView;
     }

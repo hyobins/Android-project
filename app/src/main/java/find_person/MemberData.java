@@ -4,12 +4,12 @@ package find_person;
 public class MemberData {
     String name; //이름
     String date; //날짜
-    int imgId; //그림 id
+    String image; //그림
 
-    public MemberData(String name, String date, int imgId){
+    public MemberData(String name, String date, String image){
         this.name = name;
         this.date = date;
-        this.imgId = imgId;
+        this.image = image;
     }
 
     //이 아래는 getter , setter 메소드듭입니다.
@@ -25,9 +25,7 @@ public class MemberData {
         this.date = date;
     }
 
-    public void setImgId(int imgId){
-        this.imgId = imgId;
-    }
+    public void setImage(String image){ this.image = image; }
 
     public String getName(){
         return name;
@@ -37,8 +35,6 @@ public class MemberData {
         return date;
     }
 
-    public int getImgId(){
-        return imgId;
-    }
+    public String getImage(){ return image; }
 
 }
